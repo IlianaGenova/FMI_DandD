@@ -9,21 +9,26 @@
 
 class Hero
 {
+  int level;
   int strength;
   int mana;
   int health;
 
   protected:
     Hero(){};
-    Hero(int strength, int mana, int health);;
+    Hero(int strength, int mana, int health);
 
     int getStrength();
     int getMana();
     int getHealth();
+    int getLevel();
 
     void setStrength(int strength);
     void setMana(int mana);
     void setHealth(int health);
+    void setLevel(int level);
+
+    void levelUp();
 };
 
 #endif

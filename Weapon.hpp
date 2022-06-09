@@ -1,11 +1,11 @@
-#ifndef __ARMOR_HPP__
-#define __ARMOR_HPP__
+#ifndef __WEAPON_HPP__
+#define __WEAPON_HPP__
 
 #include "Item.hpp"
 
-class Armor : protected Item
+class Weapon : protected Item
 {
-  Armor(int percentage) : Item(percentage);
-}
+  Weapon(int percentage) : Item(percentage){};
+};
 
 #endif

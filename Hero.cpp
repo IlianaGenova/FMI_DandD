@@ -5,6 +5,8 @@ Hero::Hero(int strength, int mana, int health)
   setStrength(strength);
   setMana(mana);
   setHealth(health);
+
+  this->level = 1;
 }
 
 /**
@@ -26,6 +28,11 @@ int Hero::getHealth()
   return this->health;
 }
 
+int Hero::getLevel()
+{
+  return this->level;
+}
+
 
 /**
  * @brief Setter functions of class Hero
@@ -44,4 +51,19 @@ void Hero::setMana(int mana)
 void Hero::setHealth(int health)
 {
   this->health = health;
+}
+
+void Hero::setLevel(int level)
+{
+  this->level = level;
+}
+
+
+/**
+ * @brief Level up hero
+ * Increments the level of the hero
+ */
+void Hero::levelUp()
+{
+  this->level++;
 }
