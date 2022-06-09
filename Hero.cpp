@@ -7,7 +7,12 @@ Hero::Hero(int strength, int mana, int health)
   setHealth(health);
 
   this->level = 1;
+
+  addItemToInventory(Weapon("Regular sword", 20));
+  addItemToInventory(Spell("Fireball", 20));
 }
+
+
 
 /**
  * @brief Getter functions of class Hero
@@ -32,6 +37,7 @@ int Hero::getLevel()
 {
   return this->level;
 }
+
 
 
 /**
@@ -59,6 +65,7 @@ void Hero::setLevel(int level)
 }
 
 
+
 /**
  * @brief Level up hero
  * Increments the level of the hero
@@ -66,4 +73,24 @@ void Hero::setLevel(int level)
 void Hero::levelUp()
 {
   this->level++;
+}
+
+/**
+ * @brief Returns the items in the hero's inventory
+ * 
+ * @return vector<Item> 
+ */
+vector<Item> Hero::checkInventory()
+{
+  return this->inventory;
+}
+
+/**
+ * @brief Adds item to the hero's inventory
+ * 
+ * @param item 
+ */
+void Hero::addItemToInventory(Item item)
+{
+  this->inventory.push_back(item);
 }

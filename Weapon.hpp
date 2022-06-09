@@ -3,9 +3,10 @@
 
 #include "Item.hpp"
 
-class Weapon : protected Item
+class Weapon : public Item
 {
-  Weapon(int percentage) : Item(percentage){};
+  public:
+    Weapon(string name, int percentage) : Item(name, percentage){};
 };
 
 #endif

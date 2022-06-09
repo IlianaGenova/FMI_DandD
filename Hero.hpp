@@ -1,6 +1,13 @@
 #ifndef __HERO_HPP__
 #define __HERO_HPP__
 
+#include "Item.hpp"
+#include "Weapon.hpp"
+#include "Armor.hpp"
+#include "Spell.hpp"
+
+#include "libraries.h"
+
 /**
  * @brief  Class Hero
  * Should be an abstract, non-instantiable class - protected constructors make it such.
@@ -13,6 +20,7 @@ class Hero
   int strength;
   int mana;
   int health;
+  vector<Item> inventory;
 
   protected:
     Hero(){};
@@ -29,6 +37,8 @@ class Hero
     void setLevel(int level);
 
     void levelUp();
+    vector<Item> checkInventory();
+    void addItemToInventory(Item item);
 };
 
 #endif

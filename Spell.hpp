@@ -3,9 +3,10 @@
 
 #include "Item.hpp"
 
-class Spell : protected Item
+class Spell : public Item
 {
-  Spell(int percentage) : Item(percentage){};
+  public:
+    Spell(string name, int percentage) : Item(name, percentage){};
 };
 
 #endif
