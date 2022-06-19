@@ -3,21 +3,33 @@
 
 #include "libraries.h"
 
+enum ItemType
+{
+  WEAPON,
+  ARMOR,
+  SPELL
+};
+
 class Item
 {
-  string name;
-  int percentage;
+    ItemType type;
+    string name;
+    int percentage;
 
   protected:
+    void setItemType(ItemType type);
+    void setPercentage(int percentage);
+    void setName(string name);
 
-  Item(){};
-  Item(string name, int percentage);
+    ItemType getItemType();
+    int getPercentage();
+    string getName();
 
-  void setPercentage(int percentage);
-  void setName(string name);
+  public:
+    Item(){};
+    Item(ItemType type, string name, int percentage);
 
-  int getPercentage();
-  string getName();
+    ItemType getItemType();
 };
 
 #endif

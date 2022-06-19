@@ -1,10 +1,7 @@
 #ifndef __HERO_HPP__
 #define __HERO_HPP__
 
-#include "Item.hpp"
-#include "Weapon.hpp"
-#include "Armor.hpp"
-#include "Spell.hpp"
+#include "Inventory.hpp"
 
 #include "libraries.h"
 
@@ -20,7 +17,7 @@ class Hero
   int strength;
   int mana;
   int health;
-  vector<Item> inventory;
+  Inventory inventory;
 
   protected:
     Hero(){};
@@ -37,8 +34,6 @@ class Hero
     void setLevel(int level);
 
     void levelUp();
-    vector<Item> checkInventory();
-    void addItemToInventory(Item item);
 };
 
 #endif
