@@ -7,7 +7,7 @@
 
 #include "Hero.hpp"
 
-class Warrior : protected Hero
+class Warrior : public Hero
 {
   Warrior();
 };

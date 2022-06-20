@@ -23,10 +23,12 @@ class Hero
     Hero(){};
     Hero(int strength, int mana, int health);
 
+  public:
     int getStrength();
     int getMana();
     int getHealth();
     int getLevel();
+    Inventory& getInventory();
 
     void setStrength(int strength);
     void setMana(int mana);
@@ -34,6 +36,7 @@ class Hero
     void setLevel(int level);
 
     void levelUp();
+    void receiveDamage(int damage);
 };
 
 #endif

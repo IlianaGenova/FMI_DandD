@@ -16,7 +16,10 @@ class Item
     string name;
     int percentage;
 
-  protected:
+  public:
+    Item(){};
+    Item(ItemType type, string name, int percentage);
+
     void setItemType(ItemType type);
     void setPercentage(int percentage);
     void setName(string name);
@@ -24,12 +27,6 @@ class Item
     ItemType getItemType();
     int getPercentage();
     string getName();
-
-  public:
-    Item(){};
-    Item(ItemType type, string name, int percentage);
-
-    ItemType getItemType();
 };
 
 #endif

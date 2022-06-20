@@ -8,9 +8,6 @@ Hero::Hero(int strength, int mana, int health)
 
   this->level = 1;
   this->inventory = Inventory();
-
-  this->inventory.addItemToInventory(new Item(ItemType::WEAPON, "Regular sword", 20));
-  this->inventory.addItemToInventory(new Item(ItemType::SPELL, "Fireball", 20));
 }
 
 
@@ -39,6 +36,10 @@ int Hero::getLevel()
   return this->level;
 }
 
+Inventory& Hero::getInventory()
+{
+  return this->inventory;
+}
 
 
 /**
@@ -74,4 +75,9 @@ void Hero::setLevel(int level)
 void Hero::levelUp()
 {
   this->level++;
+}
+
+void Hero::receiveDamage(int damage)
+{
+  this->health -= damage;
 }

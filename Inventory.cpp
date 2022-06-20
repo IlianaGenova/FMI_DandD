@@ -36,8 +36,22 @@ vector<Item*> Inventory::checkInventory()
  */
 void Inventory::addItemToInventory(Item* item)
 {
-  if(this->items.size() < MAX_ITEMS)
+  int itemSize = this->items.size();
+
+  if(itemSize <= MAX_ITEMS)
   {
+    for(int i = 0; i < itemSize; i++)
+    {
+      if(this->items[i]->getItemType() == item->getItemType())
+      {
+        cout << "Overwriting " + this->items[i]->getName() + " with " + item->getName() << endl;
+        this->items[i] = item;
+        return;
+      }
+    }
+
     this->items.push_back(item);
   }
+
+  cout << "Something went wrong. Inventory overflowing" << endl;
 }
