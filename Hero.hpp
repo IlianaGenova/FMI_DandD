@@ -35,7 +35,7 @@ class Hero
     void setHealth(int health);
     void setLevel(int level);
 
-    void levelUp();
+    virtual void levelUp();
     void receiveDamage(int damage);
 };
 

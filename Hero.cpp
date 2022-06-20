@@ -66,17 +66,6 @@ void Hero::setLevel(int level)
   this->level = level;
 }
 
-
-
-/**
- * @brief Level up hero
- * Increments the level of the hero
- */
-void Hero::levelUp()
-{
-  this->level++;
-}
-
 void Hero::receiveDamage(int damage)
 {
   this->health -= damage;

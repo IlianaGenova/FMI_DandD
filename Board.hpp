@@ -8,13 +8,17 @@
 
 class Board
 {
+  char** board;
+
+  public:
+    Board(int width, int height, int treasures, int monsters);
+
     int BoardWidth;
     int BoardHeight;
     int TreasureCount;
     int MonsterCount;
 
-  public:
-    Board(int width, int height, int treasures, int monsters);
+    ~Board();
 
 };
 

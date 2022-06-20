@@ -10,6 +10,8 @@
 class Dragon : public Hero
 {
   Dragon();
+
+  void levelUp();
 };
 
 #endif

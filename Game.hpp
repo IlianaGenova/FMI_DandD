@@ -5,14 +5,17 @@
 #include "Board.hpp"
 
 // initial values
-int previousLevelBoardValues[4] = {5, 0, 1, 0};
+int previousLevelBoardValues[4] = [5, 0, 1, 0];
 
 class Game
 {
     int level;
+    Board* board;
 
   public:
+    void newGame();
     void levelUp();
+    void createNewBoard()
 
 };
 
